@@ -69,15 +69,16 @@
         document.body.style.textAlign = "left";
       }
 
+      // Macros replaced with actual paths
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
-        dataUrl: "%UNITY_WEBGL_DATA_URL%",
-        frameworkUrl: "%UNITY_WEBGL_FRAMEWORK_URL%",
-        codeUrl: "%UNITY_WEBGL_CODE_URL%",
+        dataUrl: "Build/unity.data",
+        frameworkUrl: "Build/unity.framework.js",
+        codeUrl: "Build/unity.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "%COMPANY_NAME%",
-        productName: "%PRODUCT_NAME%",
-        productVersion: "%PRODUCT_VERSION%",
+        companyName: "MNET",
+        productName: "CampusGuessr",
+        productVersion: "0.1",
         // matchWebGLToCanvasSize: false,
         // devicePixelRatio: 1,
       }).then(function(unityInstance) {
